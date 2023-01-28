@@ -1,0 +1,34 @@
+#zadanie 1
+
+a = int(input())
+b = int(input())
+h = int(input())
+for i in range(a, b + 1, h):
+    x = i
+    print(x * math.ln(1 + math.sin(x)/x)/(x+math.sin(x)))
+
+#zadanie 2
+
+def F(s):
+    a = []
+    a.append(len(s))
+    a.append(s.count(' ') + 1)
+    alpha = len([i for i in s if i.isalpha()])
+    digit = len([i for i in s if i.isdigit()])
+    a.append(alpha)
+    a.append(digit)
+    a.append(len(s) - alpha - digit)
+
+s = input()
+a = F(s)
+print(a)
+
+#zadanie 3
+
+n = int(input())
+f = open('hw.txt')
+f = f.readlines()
+if n > len(f) - 1:
+    print('Число слишком большое')
+else:
+    print(f[n])
