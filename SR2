@@ -37,6 +37,32 @@ if s1 == 'adm':
     else:
         print('Неисполняемое действие')
 
+#Zadanie 4
 
+def f(x, y, z):
+    s = 0
+    for i in range(x, y):
+        s += 1 / (i ** z)
+    return s
 
+print((f(1, 5, 1) + f(1, 3, 2)) / 2)
 
+#Zadanie 5
+
+n = int(input())
+A = []
+for i in range(n):
+    A.append([0] * n)
+
+for i in range(n):
+    for j in range(n):
+        if i > j:
+            A[i][j] = n - i + j
+        elif j == i:
+            A[i][j] = n
+b = []
+for i in range(n):
+    b.append(A[i][24])
+for i in range(len(A)):
+    print(*A[i])
+print(min(b))
